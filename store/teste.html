@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Store</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″>
+        
+        <link rel="shortcut icon" href="./logo.svg" style="width:50px">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./assets/css/main.css" />
+        
+        <script src="./assets/js/jquery.js"></script>
+        <script src="./assets/js/bootstrap.min.js"></script>
+        <script src="./assets/js/main.js"></script>
+      <script>
+
+	$(document).ready(function(){
+
+	
+	$.ajax({
+		type:"GET",
+		//dataType:"json",
+		url:'https://www.hackthebox.eu/api/invite/how/to/generate',
+		beforeSend: function(xhr) {
+    		  xhr.setRequestHeader("XSRF-TOKEN", "eyJpdiI6IkNUYWFxTFpxcGhqUW5cL0hxUFR6bFp3PT0iLCJ2YWx1ZSI6IkZsNHlra0V6UmU3YzNoMjUwdkRRdnh6b2d0VUhSQktJVkRRM3hMUWdabFwvSzV2ZHZMb2FhcVNjOWFZZEUzRXorIiwibWFjIjoiNjNkMThhNzY1ZTQ0NzJiODg5MTMyNWZkODIxZTRmOTQ2OGEyOWJmMDI5ZjhmZTdjMzk3NmM4MzQwMDA2MjRjMSJ9");
+  		  xhr.setRequestHeader("hackthebox_session", "eyJpdiI6IlFkYU5SaDlxZ01sNVc0STIxTlhCN0E9PSIsInZhbHVlIjoiUmwrSzZcL3oxbytCYXRaOGI2bmxBMWlHS2lEcERlVndnb0hoNUhvcG1FdjhjUzByMUkzTitiRkZCMnJtWTcxNTciLCJtYWMiOiI2ZmFiMGQ5NGQ5MGZjZDlmYWI4Nzc1YTQyMGVmMGZlMjlmOGU0MzRiN2QwNGI4YjFhNGE2ZTk5YzgxNzgwMjBkIn0%3D");
+  		
+		},
+		success:function(a){
+		  alert(a)
+		},
+		error:function(a){
+		  alert('Erro :( ')
+		}    
+	});
+	})
+   </script>
+    </head>
+
+    <body style="background-color:#e9ecef">
+            <header id="header">
+
+            </header>
+
+            <div id="app">
+                <div class="container">
+                    
+                    <div class="row justify-content-center">
+                        <h4 class="space">Criada em 2020 para melhor atendelos.</h4>
+                    </div>
+                </div>
+            </div>
+            <!--<footer id="footer" class="py-4 bg-dark">
+            </footer>-->
+    </body>
+</html>    

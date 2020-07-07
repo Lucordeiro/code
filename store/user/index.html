@@ -1,0 +1,591 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        
+        <meta charset="utf-8">
+        <title>Store</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="SHORTCUT ICON" href="./logo.svg" style="width:50px">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+        <link rel="stylesheet" href="./../assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./../assets/css/adminlte.min.css" />
+        <link rel="stylesheet" href="./../assets/css/main.css" />
+
+        
+    </head>
+    <body>
+        <header id="header">
+
+        </header>
+        <div id="user" class="space">
+            <div class="container" style="display: none;">
+                <h4 id="usuario-nome">  </h4><a href="#" id="btn-logout">Sair</a>
+                <div class="row justify-content-center">
+                    
+                    <div class="col-lg-3">
+                        <div id="user-painel" class="list-group" style="display: none;">
+                            <a href="#"  id="pedidos" class="list-group-item active">Pedidos</a>
+                            <a href="#"  id="dados" class="list-group-item">Seus dados</a>
+                            <a href="#"  id="enderecos" class="list-group-item">Endereço</a>
+                            <a href="#"  id="ajuda" class="list-group-item">Central de Ajuda</a>
+                        </div>
+                        
+                        <div id="root-painel" class="list-group" style="display: none;">
+                                <a href="#"  id="tod-pedidos" class="list-group-item active">Pedidos</a>
+                                <a href="#"  id="devol" class="list-group-item">Devoluçoes</a>
+                                <a href="#"  id="produtos" class="list-group-item">Produtos</a>
+                                <a href="#"  id="clientes" class="list-group-item">Clientes</a>
+                                <a href="#"  id="mensagens" class="list-group-item disabled">Mensagens</a>
+                                <a href="#"  id="newsletter" class="list-group-item disabled">Newsletter</a>                             
+                                <a href="#"  id="config" class="list-group-item disabled">Config</a>
+                        </div>
+                        
+                    </div>
+                    <div class="col-lg-9">
+                        <div id="aba-pedidos" class="aba">
+                            <h4 class="text-center">Pedidos</h4>
+                            <table class="table table-bordered">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Codigo do pedido</th>
+                                    <th scope="col">Data</th>
+                                    <th scope="col">Status</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">#</th>
+                                    <td>10001201211111111</td>
+                                    <td>12/05/2019</td>
+                                    <td>recebido</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">#</th>
+                                    <td>21000120121111111</td>
+                                    <td>15/04/2019</td>
+                                    <td>aguardando pagamento</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">#</th>
+                                    <td >31000120121111111</td>
+                                    <td>19/02/2019</td>
+                                    <td>Transportadora</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                        <div id="aba-dados" class="aba" style="display: none;">
+                            <h4 class="text-center">Seus dados</h4>
+                            <div class="card">
+                                <div class="card-body login-card-body">
+                                    <form>
+                                        <div class="input-group mb-3">
+                                            <input type="email" class="form-control" placeholder="Nome Completo"/>
+                                            <div class="input-group-append">
+                                                <div class="input-group-text">
+                                                    <span class="fas fa-user"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="input-group mb-3">
+                                            <input type="email" class="form-control" placeholder="Email"/>
+                                            <div class="input-group-append">
+                                                <div class="input-group-text">
+                                                    <span class="fas fa-envelope"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <input type="email" class="form-control" placeholder="CPF"/>
+                                            <div class="input-group-append">
+                                                <div class="input-group-text">
+                                                    <span class="fas fa-envelope"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="input-group mb-3">
+                                            <input type="date" class="form-control" placeholder="Data de Nascimento"/>
+                                            <div class="input-group-append">
+                                                <div class="input-group-text">
+                                                    <span class="fas fa-envelope"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                                
+                                        
+                                                <div class="col-4">
+                                                    <button type="submit" class="btn btn-primary btn-block">Alterar</button>
+                                                </div>
+                                        
+                                            </div> 
+                                    </form>
+                                    
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div id="aba-carteira" class="aba" style="display: none;">
+                            <h4 class="text-center">Carteira</h4>
+                            
+                        </div>
+                        <div id="aba-enderecos" class="aba" style="display: none;">
+                            <h4 class="text-center">Endereços</h4>
+                            <div class="card">
+                                <div class="card-body login-card-body">
+                                    <form>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="CEP"/>
+                                            <div class="input-group-append">
+                                                <div class="input-group-text">
+                                                    <span class="fas fa-user"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Endereço"/>
+                                            <div class="input-group-append">
+                                                <div class="input-group-text">
+                                                    <span class="fas fa-envelope"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Número"/>
+                                            <div class="input-group-append">
+                                                <div class="input-group-text">
+                                                    <span class="fas fa-envelope"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Complemento"/>
+                                            <div class="input-group-append">
+                                                <div class="input-group-text">
+                                                    <span class="fas fa-envelope"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Cidade"/>
+                                            <div class="input-group-append">
+                                                <div class="input-group-text">
+                                                    <span class="fas fa-envelope"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <select class="form-control">
+                                                <option>Estado</option>
+                                                <option></option>
+                                                <option></option>
+                                                <option></option>
+                                                <option></option>
+                                                <option></option>
+                                            </select>
+                                            <div class="input-group-append">
+                                                <div class="input-group-text">
+                                                    <span class="fas fa-envelope"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                                
+                                        
+                                                <div class="col-4">
+                                                    <button type="submit" class="btn btn-primary btn-block">Alterar</button>
+                                                </div>
+                                        
+                                            </div> 
+                                    </form>
+                                    
+                                </div>
+                            </div>    
+                        </div>
+                        <div id="aba-ajuda" class="aba" style="display: none;">
+                            <h4 class="text-center">Ajuda</h4>
+                            <div class="card">
+                                <div class="card-body login-card-body">
+                                    <form>
+                                        <div class="input-group mb-3">
+                                            <input type="email" class="form-control" placeholder="Nome"/>
+                                            <div class="input-group-append">
+                                                <div class="input-group-text">
+                                                    <span class="fas fa-user"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="input-group mb-3">
+                                            <input type="email" class="form-control" placeholder="Email"/>
+                                            <div class="input-group-append">
+                                                <div class="input-group-text">
+                                                    <span class="fas fa-envelope"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="mensagem">Mensagem</label>
+                                            <textarea class="form-control" rows="5" id=""></textarea>
+                                           
+                                        </div>
+                                        <div class="row">
+                                                
+                                        
+                                                <div class="col-4">
+                                                    <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+                                                </div>
+                                        
+                                            </div> 
+                                    </form>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+
+
+                        <div id="aba-tod-pedidos" class="aba" style="display: none;">
+                            <h3 class="text-center">Pedidos</h3>
+                            <table class="table table-bordered">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Codigo do pedido</th>
+                                    <th scope="col">Data</th>
+                                    <th scope="col">Status</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">#</th>
+                                    <td>10001201211111111</td>
+                                    <td>12/05/2019</td>
+                                    <td>recebido</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">#</th>
+                                    <td>21000120121111111</td>
+                                    <td>15/04/2019</td>
+                                    <td>aguardando pagamento</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">#</th>
+                                    <td >31000120121111111</td>
+                                    <td>19/02/2019</td>
+                                    <td>Transportadora</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>    
+                        <div id="aba-devol" class="aba" style="display: none;">
+                            <h3 class="text-center">Devoluçoẽs</h3>
+                            <table class="table table-bordered">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Codigo do pedido</th>
+                                    <th scope="col">Data</th>
+                                    <th scope="col">Status</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">#</th>
+                                    <td>10001201211111111</td>
+                                    <td>12/05/2019</td>
+                                    <td>recebido</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">#</th>
+                                    <td>21000120121111111</td>
+                                    <td>15/04/2019</td>
+                                    <td>aguardando pagamento</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">#</th>
+                                    <td >31000120121111111</td>
+                                    <td>19/02/2019</td>
+                                    <td>Transportadora</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>    
+                        <div id="aba-produtos" class="aba" style="display: none;">
+                            <h3 class="text-center">Produtos 
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                                    Add
+                                </button>
+                            </h3>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 mb-4">
+
+                                    <div class="card h-100" >
+                                        <img class="card-img-top" src="http://placehold.it/700x400" />
+                                        <div class="card-body">
+                                            <h4><a class="card-title" href="#">Item 1</a></h4>
+                                            <h5 class="card-text">$25,00</h5>
+                                            <p class="card-text">Some example text.</p>
+                                            <div class="card-footer">
+                                                <a href="#" class="btn btn-primary">Editar</a>
+                                                <a href="#" class="btn btn-danger">Apagar</a>
+                                            </div>    
+                                                                                       
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <div class="card h-100" >
+                                        <img class="card-img-top" src="http://placehold.it/700x400" />
+                                        <div class="card-body">
+                                            <h4><a class="card-title" href="#">Item 1</a></h4>
+                                            <h5 class="card-text">$25,00</h5>                                            
+                                            <p class="card-text">Some example text.</p>
+                                            <div class="card-footer">
+                                                <a href="#" class="btn btn-primary">Editar</a>
+                                                <a href="#" class="btn btn-danger">Apagar</a>
+                                            </div>                                   
+                                        </div>
+                                    </div>
+                                </div>
+                                        <div class="col-lg-4 col-md-6 mb-4">
+            
+                                                <div class="card h-100" >
+                                                    <img class="card-img-top" src="http://placehold.it/700x400" />
+                                                    <div class="card-body">
+                                                        <h4><a class="card-title" href="#">Item 1</a></h4>
+                                                        <h5 class="card-text">$25,00</h5>                                            
+                                                        <p class="card-text">Some example text.</p>
+                                                        <div class="card-footer">
+                                                                <a href="#" class="btn btn-primary">Editar</a>
+                                                                <a href="#" class="btn btn-danger">Apagar</a>
+                                                        </div>                                   
+                                                    </div>
+                                                    
+                                                </div>
+                                                
+                                        </div>
+            
+            
+                            </div>
+
+                            <!-- Button trigger modal -->
+                            <!-- Modal add-->
+                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Adicionar produto</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container-fluid">
+                                            <form id="prodForm" enctype="multipart/form-data">
+                                                <div class="row">
+                                                
+                                                    <div class="col-lg-6">
+                                                        <div class="input-group mb-3">
+                                                            <input id="txt-name" type="name" class="form-control" name="txt-name" placeholder="Nome do Produto" />
+                                                            
+                                                        </div>
+                                                        <div class="input-group mb-3">
+                                                            <input id="txt-price" type="text" class="form-control" name="txt-price" placeholder="Preço" />
+                                                            
+                                                        </div>
+                                                        <div class="input-group mb-3">
+                                                            <!--
+                                                            <label>Foto Principal</label>
+                                                            <input id="photo_a" class="form-control" type="file" name="photo_a"/>-->
+                                                            <div class="custom-file">
+                                                                <input type="file" value="Escolher" class="custom-file-input" id="fileOne">
+                                                                <label class="custom-file-label" for="customFile">Foto Principal</label>
+                                                              </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="input-group mb-3">
+                                                            <input id="txt-amount" type="text" class="form-control" name="txt-amount" placeholder="Quantidade em estoque" />
+                                                            
+                                                        </div>
+                                                        <div class="input-group mb-3">
+                                                            <select id="sel-categorie" class="form-control" name="sel-categorie">
+                                                                <option value="#">----Categoria----</option>
+                                                                <option value="brinco">Brinco</option>
+                                                                <option value="anel">Anel</option>
+                                                                <option value="corrente">Corrente</option>
+            
+                                                            </select>
+                                                                    
+                                                        </div>
+                                                        <div class="input-group mb-3">
+                                                            <!--
+                                                            <label>Fotos adicionais</label>
+                                                            <input id="photos_add" class="btn btn-secondary" type="file" multiple="multiple" name="fil-photos"/>
+                                                            -->
+                                                            <div class="custom-file">
+                                                                <input type="file" value="Escolher" class="custom-file-input" multiple="multiple" id="othFiles">
+                                                                <label class="custom-file-label" for="customFile">Fotos adicionais</label>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                
+
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-8">
+                                                        <div class="input-group mb-3">
+                                                            <textarea id="txt-description" class="form-control" rows="5" name="txt-description" placeholder="Descriçao do Produto"></textarea>            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                    <button type="button" class="btn btn-primary" id="btn-add-product">Add</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+
+
+                        </div>    
+                        <div id="aba-clientes" class="aba" style="display: none;">
+                            <h3 class="text-center">Clientes</h3>
+                            <table id="users-table" class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Nome</th>
+                                        <th scope="col">Data de cadastro</th>
+                                        <th scope="col">Quantidade de compras</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tab-clie">
+                                  
+                                </tbody>
+                              </table>
+                        </div>    
+                        <div id="aba-mensagens" class="aba" style="display: none;">
+                            <h3 class="text-center">Mensagens</h3>
+                            <div class="card">
+                                <div class="card-body login-card-body">
+                                    <form>
+                                        <div class="input-group mb-3">
+                                            <input type="email" class="form-control" placeholder="Nome"/>
+                                            <div class="input-group-append">
+                                                <div class="input-group-text">
+                                                    <span class="fas fa-user"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="input-group mb-3">
+                                            <input type="email" class="form-control" placeholder="Email"/>
+                                            <div class="input-group-append">
+                                                <div class="input-group-text">
+                                                    <span class="fas fa-envelope"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="mensagem">Mensagem</label>
+                                            <textarea class="form-control" rows="5" id=""></textarea>
+                                           
+                                        </div>
+                                        <div class="row">
+                                                
+                                        
+                                                <div class="col-4">
+                                                    <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+                                                </div>
+                                        
+                                            </div> 
+                                    </form>
+                                    
+                                </div>
+                            </div>
+                        </div> 
+                        <div id="aba-newsletter" class="aba" style="display: none;">
+                            <h3 class="text-center">Newsletter</h3>
+                            
+                        </div> 
+                        <!--
+                            $('#myModal').on('shown.bs.modal', function () {
+                              $('#myInput').trigger('focus')
+                            })
+                        -->
+                        <div id="aba-config" class="aba" style="display: none;">
+                            <h4 class="text-center">Configuraçoes</h4>
+                            <div class="card">
+                                <div class="card-body login-card-body">
+                                    <form>
+                                        <div class="input-group mb-3">
+                                            <input type="email" class="form-control" placeholder="Nome"/>
+                                            <div class="input-group-append">
+                                                <div class="input-group-text">
+                                                    <span class="fas fa-user"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="input-group mb-3">
+                                            <input type="email" class="form-control" placeholder="Email"/>
+                                            <div class="input-group-append">
+                                                <div class="input-group-text">
+                                                    <span class="fas fa-envelope"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="mensagem">Mensagem</label>
+                                            <textarea class="form-control" rows="5" id=""></textarea>
+                                           
+                                        </div>
+                                        <div class="row">
+                                                
+                                        
+                                                <div class="col-4">
+                                                    <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+                                                </div>
+                                        
+                                            </div> 
+                                    </form>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+        <footer id="footer"></footer>
+        
+        
+        <script src="./../assets/js/jquery.js"></script>
+        <script src="./../assets/js/jquery.mask.js"></script>      
+        <script src="./assets/js/main.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+       
+    </body>
+</html>
