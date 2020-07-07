@@ -2,8 +2,8 @@
     class connection{
         
         private $host = "localhost";
-        private $user = "root";
-        private $pass = "to0r";
+        private $user = "user";
+        private $pass = "pass";
         private $db = "store";
         private $instance = NULL;
 
